@@ -1,0 +1,92 @@
+//clonar um git
+git clone minha-branch
+
+//iniciar um git não iniciado
+echo "# as" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/abnerjosefelixbarbosa/MarketEscale.git
+git push -u origin main
+
+//iniciar um git já iniciado 
+git remote add origin https://github.com/abnerjosefelixbarbosa/MarketEscale.git
+git branch -M main
+git push -u origin main
+
+//puxar um git
+git pull origin main
+git pull origin main --allow-unrelated-histories
+
+Mesclagem de avanço rápido
+
+# Start a new feature
+git checkout -b new-feature main
+# Edit some files
+git add <file>
+git commit -m "Start a feature"
+# Edit some files
+git add <file>
+git commit -m "Finish a feature"
+# Merge in the new-feature branch
+git checkout main
+git merge new-feature
+git branch -d new-feature
+
+Mesclagem de 3 vias
+
+Start a new feature
+git checkout -b new-feature main
+# Edit some files
+git add <file>
+git commit -m "Start a feature"
+# Edit some files
+git add <file>
+git commit -m "Finish a feature"
+# Develop the main branch
+git checkout main
+# Edit some files
+git add <file>
+git commit -m "Make some super-stable changes to main"
+# Merge in the new-feature branch
+
+Resolução de conflitos
+
+git status
+
+here is some content not affected by the conflict
+<<<<<<< main
+this is conflicted text from main
+=======
+this is conflicted text from feature branch
+>>>>>>> feature branch;
+
+Git Branch
+
+# criar branches
+git branch minha-branch
+
+# lista branches
+git branch --list
+
+# excluir branches
+git branch -d minha-branch
+
+# trocar uma branch
+git checkout minha-branch
+//
+git checkout -b minha-branch
+
+# excluir remoto
+git remote -d nome-remoto 
+
+# excluir branches de outro repositorio
+git push origin :minha-branch
+
+#buscar conteúdo do branch
+git fetch --all
+
+
+
+
